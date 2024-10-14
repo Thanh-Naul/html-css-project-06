@@ -101,11 +101,11 @@
     <title>CeloBank</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header fixed">
       <div class="container">
         <div class="header-top">
           <!-- logo -->
-          <a href="#!">
+          <a href="./">
             <img src="./assets/icon/Logo.svg" alt="" class="header__logo" />
           </a>
           <!-- Navbar -->
@@ -160,6 +160,7 @@
                 name="email"
                 id="email"
                 placeholder="Your email address"
+                required
               />
               <button type="submit" class="btn form__subscribe-btn">
                 Get Started
@@ -655,7 +656,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <a href="/">
+          <a href="./">
             <img src="./assets/icon/Logo.svg" alt="" class="footer__logo"
           /></a>
           <div class="footer__list">
@@ -707,13 +708,14 @@
               </p>
               <h3 class="footer-item__heading">News letter</h3>
               <div class="footer__cta">
-                <form action="email" class="footer-item__form">
+                <form action="email" class="footer-item__form" method="post">
                   <input
                     type="email"
                     name="email"
                     id="email"
                     class="footer-item__input"
                     placeholder="Email address..."
+                    required
                   />
                 </form>
                 <button type="submit" class="btn footer-item__btn">

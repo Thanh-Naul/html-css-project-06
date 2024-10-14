@@ -58,12 +58,18 @@ a {
 }
 
 /* Header */
+.header.fixed {
+  position: sticky;
+  top: -28px;
+  z-index: 3;
+}
+
 .header {
-  padding: 26px 0;
   background: #fff;
 }
 
 .header-top {
+  padding: 36px 0 8px;
   display: flex;
   align-items: center;
 }
@@ -912,6 +918,7 @@ a {
   border: 2px solid #ccc;
   background: #fff;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .client__arrow:hover,
@@ -1259,14 +1266,20 @@ a {
   line-height: 1.75; /* 175% */
   border: none;
   outline: none;
-  opacity: 0.7;
   border-radius: inherit;
   background-color: inherit;
+}
+
+.footer-item__input::placeholder {
+  opacity: 0.7;
 }
 
 .footer-item__btn {
   margin-left: 20px;
   border: none;
+}
+.footer__address {
+  padding-bottom: 28px;
 }
 
 .footer__email {
