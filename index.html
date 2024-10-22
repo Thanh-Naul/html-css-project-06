@@ -98,19 +98,32 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- Styles CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <title>CeloBank</title>
   </head>
   <body>
+    <!-- PC HEADER -->
     <header class="header fixed">
       <div class="container">
         <div class="header-top">
+           <!-- Tablet//Mobile menu-->
+           <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+
           <!-- logo -->
           <a href="./">
-            <img src="./assets/icon/Logo.svg" alt="" class="header__logo" />
+            <img src="./assets/icon/Logo.svg" alt="" class="logo" />
           </a>
           <!-- Navbar -->
           <nav class="navbar">
-            <ul class="navbar__list">
+            <ul class="navbar__list" id="pc-nav">
               <li class="navbar-item">
                 <a href="#!" class="navbar-item__link navbar-item__link-active"
                   >Home</a
@@ -125,23 +138,55 @@
               <li class="navbar-item">
                 <a href="#!" class="navbar-item__link">Blog</a>
               </li>
+              <li><a class="navbar-item__link show-on-mobile separate" href="#!">Sign in</a></li>
+            <li><a class="navbar-item__link show-on-mobile" href="#!">Sign Up</a></li>
             </ul>
           </nav>
           <!-- action -->
           <div class="header__action">
-            <a href="#!" class="header-action__link">Log in</a>
-            <a href="#!" class="btn header-action__btn">Sign Up</a>
+            <a href="#!" class="header-action__link hide-on-mobile">Log in</a>
+            <a href="#!" class="btn header-action__btn hide-on-mobile">Sign Up</a>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- Tablet / Mobile header -->
+    <header class="menu-header">
+      <input type="checkbox" 
+      name="" 
+      id="menu-checkbox" 
+      class="menu-checkbox" 
+      hidden/>
+      
+
+      <!-- overlay -->
+       <label for="menu-checkbox" class="menu-overlay"></label>
+        <!-- menu content -->
+      <div class="menu-drawer">
+        <!-- Logo -->
+        <a href="./">
+          <img src="./assets/icon/Logo.svg" alt=""/>
+        </a>
+
+          <!-- NAVIGATION -->
+          <ul id="mobile-nav"></ul>
+          <script>
+            const pcNav = document.querySelector("#pc-nav");
+            const mobileNav = document.querySelector("#mobile-nav");
+            // Copy from pcnav => mobile nav
+            mobileNav.innerHTML = pcNav.innerHTML;
+          </script>
+    </header>
+
+
     <!-- Hero -->
     <section class="hero">
       <div class="container">
         <div class="hero__inner">
           <!-- hero-content -->
           <section class="hero__content">
-            <p class="hero__label">Digital Smart Wallet</p>
+            <p class="hero__label hero__label-tablet">Digital Smart Wallet</p>
             <h1 class="hero__heading" data-aos="fade-up">
               Digital
               <strong class="hero__heading--highlight">Payment</strong> For
@@ -239,7 +284,7 @@
             </figure>
             <!-- content -->
             <section class="how__content">
-              <p class="hero__label">Digital Smart Wallet</p>
+              <p class="hero__label how__label">Digital Smart Wallet</p>
               <h2 class="how__heading" data-aos="fade-down">How It Works</h2>
               <div class="how__list">
                 <!-- column 1 -->
@@ -282,11 +327,11 @@
           <div class="card__inner">
             <!-- content -->
             <section class="card__content">
-              <p class="hero__label">Digital Smart Wallet</p>
+              <p class="hero__label card-label">Digital Smart Wallet</p>
               <h2 class="card__heading" data-aos="fade-right">
                 One Card For All Your Payments
               </h2>
-              <p class="card__desc">
+              <p class="card__desc ">
                 We bring together eveything that’s required to build websites
                 and apps that accept payments and send payouts globally. We are
                 the best platform.
@@ -416,7 +461,7 @@
             <!-- content -->
             <!-- content -->
             <section class="feature__content">
-              <p class="hero__label">Digital Smart Wallet</p>
+              <p class="hero__label feature__label">Digital Smart Wallet</p>
               <h2 class="feature__heading">
                 Transfer and Deposite Your Money Anytime
               </h2>
