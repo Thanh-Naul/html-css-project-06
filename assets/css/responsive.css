@@ -11,8 +11,6 @@
 
 /*========= tablet & mobile ===========*/
 @media screen and (max-width: 991px) {
-  
-
   .container {
     max-width: calc(100% - 25px);
   }
@@ -22,7 +20,8 @@
   }
 
   .header__action {
-    width: 40%;
+    width: 27%;
+    text-align: right; /* Căn nội dung bên trong header__action sang phải nếu cần */
   }
 
   .navbar {
@@ -32,6 +31,7 @@
   .logo {
     display: inline-block;
     position: relative;
+    /* margin-right: auto;  */
     top: 0;
     left: 0;
   }
@@ -133,30 +133,29 @@
   .how__inner {
     display: grid;
     grid-template-columns: 1fr;
-    padding-left: 60px;
   }
   .how__media {
     display: none;
   }
 
   .how__content {
-    width: 65%;
     margin: 0;
     text-align: center;
   }
 
   .how__label::before {
-    left: 75px;
+    left: 232px;
   }
 
   /* card */
 
   .card__inner {
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .card__content {
-    width: 75%;
     text-align: center;
   }
 
@@ -175,6 +174,14 @@
   }
 
   /* feature */
+  .feature__inner {
+    justify-content: center;
+  }
+
+  .feature__content {
+    text-align: center;
+  }
+
   .feature__media {
     display: none;
   }
